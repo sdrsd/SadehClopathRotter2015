@@ -1,8 +1,7 @@
 ## General description
 
-Simulating and analysing plastic recurrent networks as in: [1] Sadeh, Clopath and Rotter. Emergence of Functional Specificity in
-Balanced Networks with Synaptic Plasticity. PLOS Computational Biology
-2015.
+Simulating and analysing plastic recurrent networks as in: Sadeh, Clopath and Rotter. Emergence of Functional Specificity in
+Balanced Networks with Synaptic Plasticity. [PLOS Computational Biology 2015](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004307).
 
 ### List of files
 
@@ -23,7 +22,7 @@ Uses network_simulator.py and runs a simulation of a plastic recurrent network.
 
 Reads the results from network_run.py and plots Figures 1 and 3 in [1]
 
-### To simulate the network and plot the figure(s):*
+### To simulate the network and plot the figure(s):
 
 First run (3): simulates the network and saves the results;
 
@@ -32,8 +31,8 @@ then run (4): reads the results and plots Figures 1 (top below) and
 
 <img src="./figure_1.png" alt="Figure 1" width="550">
 
-<img src="./figure_2.png" alt="Figure 3ABC" width="550">
+<img src="./figure_3A-C.png" alt="Figure 3ABC" width="550">
 
-<img src="./figure_3.png" alt="Figure 3DEFG" width="550">
+<img src="./figure_3D-G.png" alt="Figure 3DEFG" width="550">
 
 

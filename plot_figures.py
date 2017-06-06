@@ -53,8 +53,8 @@ def _temp_plot_(spk, ax, stim=0, yy=0):
 	exid = np.where(spk[0] < ne)[0]
 	inid = np.where(spk[0] >= ne)[0]
 
-	htex = pl.histogram(spk[1][exid], bins=sim_time/10, range=(0, sim_time))
-	htin = pl.histogram(spk[1][inid], bins=sim_time/10, range=(0, sim_time))
+	htex = pl.histogram(spk[1][exid], bins=int(sim_time/10), range=(0, sim_time))
+	htin = pl.histogram(spk[1][inid], bins=int(sim_time/10), range=(0, sim_time))
 
 	hr = pl.histogram(spk[0], bins=n, range=(0, n)) 
 
@@ -156,7 +156,7 @@ ax4.text(.25, .1, 'Sparser activity', size=15, transform = ax4.transAxes)
 
 pl.subplots_adjust(left=.05, right=.95, bottom=.075, top=.95, wspace=.25)
 
-pl.savefig('Fig1')
+pl.savefig('figure_1')
 
 ################################################################################
 ### Figure 3 (A-C)
@@ -188,7 +188,7 @@ clb = pl.colorbar(shrink=.75)
 clb.set_ticks([-1.5, -1, -.5, 0, .5, 1, 1.5])
 clb.set_ticklabels([-1.5, -1, -.5, 0, .5, 1, 1.5])
 
-pl.savefig('Fig3A')
+pl.savefig('figure_3A-C')
 
 ###
 
@@ -292,7 +292,7 @@ pl.ylabel('Average Weight (mV)')
 
 pl.subplots_adjust(left=.05, right=.97, bottom=.15, top=.925, wspace=.45)
 
-pl.savefig('Fig3B')
+pl.savefig('figure_3D-G')
 
 pl.show()
 

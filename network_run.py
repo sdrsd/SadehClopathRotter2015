@@ -29,7 +29,7 @@ print('### before plasticity')
 
 x_bp = []
 sim_time_test = sim_time
-x_len_test = sim_time_test/dt
+x_len_test = int(sim_time_test/dt)
 for nn in range(n):
     if nn < ne: p_rate = b_rate*(1+m_exc*np.cos(2*(th - po_init[nn])))
     else: p_rate = b_rate*(1+m_inh*np.cos(2*(th - po_init[nn])))
@@ -57,7 +57,7 @@ W_blk_tot = []
 stim_rng_tot = []
 for blk in range(block_no):
     print(blk)
-    stim_rng = np.random.uniform(0, np.pi, stim_no)
+    stim_rng = np.random.uniform(0, np.pi, int(stim_no))
     stim_rng_tot.append(stim_rng)
     t_stim = sim_time / len(stim_rng)
     x_wp = []
@@ -66,7 +66,7 @@ for blk in range(block_no):
         for st in stim_rng:
             if nn < ne: p_rate = b_rate*(1+m_exc*np.cos(2*(st - po_init[nn])))
             else: p_rate = b_rate*(1+m_inh*np.cos(2*(st - po_init[nn])))
-            rates = rates + np.random.poisson(p_rate*dt/1000., x_len/len(stim_rng)).tolist()
+            rates = rates + np.random.poisson(p_rate*dt/1000., int(x_len/len(stim_rng))).tolist()
         rates = np.array(rates)
         x_wp.append(rates)
     x_wp = np.array(x_wp)
