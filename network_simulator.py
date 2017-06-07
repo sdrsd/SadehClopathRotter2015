@@ -63,7 +63,7 @@ def _net_sim_(A, y0, x, vth, W0, synapse='static'):
         if synapse == 'plastic':
             # running avg of mem pot
             t_avg = .1 # (s)
-            ind_avg = t_avg*1000/dt
+            ind_avg = int(t_avg*1000/dt)
             i_avg = i-ind_avg
             if i_avg < 0: i_avg = 0
             if i != 0: y_avg[:,i] = np.mean(y[:,i_avg:i], 1)
